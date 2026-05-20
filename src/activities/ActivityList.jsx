@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { deleteActivity } from "../api/activities";
 
@@ -8,8 +8,7 @@ export default function ActivityList({ activities, syncActivities }) {
   const [error, setError] = useState(null);
   const [errorActivityId, setErrorActivityId] = useState(-1);
 
-  use;
-
+  /** try deleting the activity with the given ID*/
   const tryDeleteActivity = async (id) => {
     setError(null);
     setErrorActivityId(-1);
